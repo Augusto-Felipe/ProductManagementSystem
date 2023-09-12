@@ -39,13 +39,17 @@
             btn_delete = new Button();
             label5 = new Label();
             btn_list = new Button();
+            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            dataGridView1 = new DataGridView();
+            label6 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(272, 12);
+            label1.Location = new Point(361, 23);
             label1.Name = "label1";
             label1.Size = new Size(123, 37);
             label1.TabIndex = 0;
@@ -53,7 +57,7 @@
             // 
             // txt_name
             // 
-            txt_name.Location = new Point(401, 23);
+            txt_name.Location = new Point(297, 63);
             txt_name.Multiline = true;
             txt_name.Name = "txt_name";
             txt_name.Size = new Size(248, 26);
@@ -143,12 +147,41 @@
             btn_list.Size = new Size(107, 122);
             btn_list.TabIndex = 8;
             btn_list.UseVisualStyleBackColor = true;
+            btn_list.Click += btn_list_Click;
+            // 
+            // mySqlCommand1
+            // 
+            mySqlCommand1.CacheAge = 0;
+            mySqlCommand1.Connection = null;
+            mySqlCommand1.EnableCaching = false;
+            mySqlCommand1.Transaction = null;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(297, 102);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(248, 184);
+            dataGridView1.TabIndex = 10;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(575, 63);
+            label6.Name = "label6";
+            label6.Size = new Size(149, 37);
+            label6.TabIndex = 11;
+            label6.Text = "Instruções";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(680, 317);
+            ClientSize = new Size(749, 317);
+            Controls.Add(label6);
+            Controls.Add(dataGridView1);
             Controls.Add(label5);
             Controls.Add(btn_list);
             Controls.Add(label4);
@@ -161,6 +194,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,5 +211,8 @@
         private Button btn_delete;
         private Label label5;
         private Button btn_list;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private DataGridView dataGridView1;
+        private Label label6;
     }
 }

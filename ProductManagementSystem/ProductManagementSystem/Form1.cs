@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace ProductManagementSystem
 {
@@ -13,30 +14,88 @@ namespace ProductManagementSystem
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            string product = txt_name.Text;
+
             try
             {
-                string data_source = "datasource=localhost;username=root;password=;database=db_inventario";
+                string connectionString = "Server=localhost;User=root;Password=;Database=db_inventario";
 
-                conn = new MySqlConnection(data_source);
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
 
-                string sql = "INSERT INTO PRODUTO (nome) VALUES ('" + txt_name.Text + "')";
+                    string sql = $"INSERT INTO PRODUTO (nome) VALUES ('{product}')";
 
-                MySqlCommand command = new MySqlCommand(sql, conn);
+                    using (MySqlCommand command = new MySqlCommand(sql, conn))
+                    {
+                        command.ExecuteNonQuery();
+                    }
 
-                conn.Open();
+                    MessageBox.Show("Produto Inserido!");
 
-                command.ExecuteReader();
-
-                MessageBox.Show("Produto Inserido!");
-
+                    conn.Close();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
+
+            //try
+            //{
+            //    string data_source = "datasource=localhost;username=root;password=;database=db_inventario";
+
+            //    conn = new MySqlConnection(data_source);
+
+            //    string sql = "INSERT INTO PRODUTO (nome) VALUES ('" + txt_name.Text + "')";
+
+            //    MySqlCommand command = new MySqlCommand(sql, conn);
+
+            //    conn.Open();
+
+            //    command.ExecuteReader();
+
+            //    MessageBox.Show("Produto Inserido!");
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //finally
+            //{
+            //    conn.Close();
+            //}
+        }
+
+        private void btn_list_Click(object sender, EventArgs e)
+        {
+            try
             {
-                conn.Close();
+                string connectionString = "Server=localhost;User=root;Password=;Database=db_inventario";
+
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string sql = "SELECT * FROM PRODUTO;";
+
+                    using (MySqlCommand command = new MySqlCommand(sql, conn))
+                    {
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+                        { 
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            dataGridView1.DataSource = dataTable;
+                        }
+                    }
+
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
