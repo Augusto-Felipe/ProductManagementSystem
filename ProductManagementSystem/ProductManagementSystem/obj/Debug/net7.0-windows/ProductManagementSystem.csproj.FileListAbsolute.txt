@@ -1,0 +1,16 @@
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.Form1.resources
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.csproj.GenerateResource.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.AssemblyInfoInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.AssemblyInfo.cs
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\bin\Debug\net7.0-windows\ProductManagementSystem.exe
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\bin\Debug\net7.0-windows\ProductManagementSystem.deps.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\bin\Debug\net7.0-windows\ProductManagementSystem.runtimeconfig.json
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\bin\Debug\net7.0-windows\ProductManagementSystem.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\bin\Debug\net7.0-windows\ProductManagementSystem.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\refint\ProductManagementSystem.dll
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.pdb
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ProductManagementSystem.genruntimeconfig.cache
+C:\Users\Felipe\OneDrive\Área de Trabalho\ProductManagementSystem\ProductManagementSystem\ProductManagementSystem\obj\Debug\net7.0-windows\ref\ProductManagementSystem.dll
