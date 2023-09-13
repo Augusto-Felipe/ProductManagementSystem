@@ -26,9 +26,9 @@ namespace ProductManagementSystem
                     {
                         conn.Open();
 
-                        string sql = $"INSERT INTO PRODUTO (nome) VALUES ('{product}')";
+                        string insertProduct = $"INSERT INTO PRODUTO (nome) VALUES ('{product}')";
 
-                        using (MySqlCommand command = new MySqlCommand(sql, conn))
+                        using (MySqlCommand command = new MySqlCommand(insertProduct, conn))
                         {
                             command.ExecuteNonQuery();
                         }
