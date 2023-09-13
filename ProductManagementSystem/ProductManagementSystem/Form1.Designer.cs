@@ -126,6 +126,7 @@
             btn_delete.Size = new Size(107, 122);
             btn_delete.TabIndex = 6;
             btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.Click += btn_delete_Click;
             // 
             // label5
             // 
