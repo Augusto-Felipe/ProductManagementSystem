@@ -4,19 +4,16 @@ namespace ProductManagementSystem
 {
     public partial class EditProduct : Form
     {
-        private int SelectedProductId;
-
         public event EventHandler DataEdited;
 
-        public EditProduct(int selectedProductId)
+        public EditProduct()
         {
             InitializeComponent();
-            SelectedProductId = selectedProductId;
         }
 
         private void btn_send_Click(object sender, EventArgs e)
         {
-
+            string productID = txt_id.Text;
             string newProductName = txt_newName.Text;
 
             try
@@ -27,7 +24,7 @@ namespace ProductManagementSystem
                 {
                     conn.Open();
 
-                    string sql = $"UPDATE PRODUTO SET nome = '{newProductName}' WHERE id = {SelectedProductId}";
+                    string sql = $"UPDATE PRODUTO SET nome = '{newProductName}' WHERE id = {productID}";
 
                     using (MySqlCommand command = new MySqlCommand(sql, conn))
                     {

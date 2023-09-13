@@ -124,14 +124,9 @@ namespace ProductManagementSystem
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                int selectedProductID = (int)dataGridView1.SelectedRows[0].Cells["id"].Value;
-                EditProduct editForm = new EditProduct(selectedProductID);
-                editForm.DataEdited += EditForm_DataEdited;
-                editForm.ShowDialog();
-            }
+            EditProduct editForm = new EditProduct();
+            editForm.DataEdited += EditForm_DataEdited;
+            editForm.ShowDialog();
         }
     }
 }
