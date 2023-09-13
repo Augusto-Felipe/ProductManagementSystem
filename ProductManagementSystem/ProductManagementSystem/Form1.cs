@@ -52,33 +52,6 @@ namespace ProductManagementSystem
         private void btn_list_Click(object sender, EventArgs e)
         {
             RefreshDataGridView();
-            //try
-            //{
-            //    string connectionString = "Server=localhost;User=root;Password=;Database=db_inventario";
-
-            //    using (MySqlConnection conn = new MySqlConnection(connectionString))
-            //    {
-            //        conn.Open();
-
-            //        string sql = "SELECT * FROM PRODUTO;";
-
-            //        using (MySqlCommand command = new MySqlCommand(sql, conn))
-            //        {
-            //            using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
-            //            {
-            //                DataTable dataTable = new DataTable();
-            //                adapter.Fill(dataTable);
-            //                dataGridView1.DataSource = dataTable;
-            //            }
-            //        }
-
-            //        conn.Close();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -141,6 +114,17 @@ namespace ProductManagementSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedProductID = (int)dataGridView1.SelectedRows[0].Cells["id"].Value;
+                EditProduct editForm = new EditProduct(selectedProductID);
+                editForm.ShowDialog();
             }
         }
     }
