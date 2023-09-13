@@ -6,6 +6,8 @@ namespace ProductManagementSystem
     {
         private int SelectedProductId;
 
+        public event EventHandler DataEdited;
+
         public EditProduct(int selectedProductId)
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace ProductManagementSystem
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Produto atualizado com sucesso!");
+                            DataEdited.Invoke(this, EventArgs.Empty);
                             this.Close();
                         }
                         else

@@ -117,6 +117,11 @@ namespace ProductManagementSystem
             }
         }
 
+        private void EditForm_DataEdited(object sender, EventArgs e)
+        {
+            RefreshDataGridView();
+        }
+
         private void btn_edit_Click(object sender, EventArgs e)
         {
 
@@ -124,6 +129,7 @@ namespace ProductManagementSystem
             {
                 int selectedProductID = (int)dataGridView1.SelectedRows[0].Cells["id"].Value;
                 EditProduct editForm = new EditProduct(selectedProductID);
+                editForm.DataEdited += EditForm_DataEdited;
                 editForm.ShowDialog();
             }
         }
