@@ -38,7 +38,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(165, 103);
+            label1.Location = new Point(124, 95);
             label1.Name = "label1";
             label1.Size = new Size(103, 15);
             label1.TabIndex = 0;
@@ -46,14 +46,14 @@
             // 
             // txt_newName
             // 
-            txt_newName.Location = new Point(165, 121);
+            txt_newName.Location = new Point(124, 113);
             txt_newName.Name = "txt_newName";
             txt_newName.Size = new Size(100, 23);
             txt_newName.TabIndex = 1;
             // 
             // btn_send
             // 
-            btn_send.Location = new Point(179, 150);
+            btn_send.Location = new Point(138, 142);
             btn_send.Name = "btn_send";
             btn_send.Size = new Size(75, 23);
             btn_send.TabIndex = 2;
@@ -64,7 +64,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(154, 48);
+            label2.Location = new Point(113, 40);
             label2.Name = "label2";
             label2.Size = new Size(125, 15);
             label2.TabIndex = 3;
@@ -72,7 +72,7 @@
             // 
             // txt_id
             // 
-            txt_id.Location = new Point(165, 66);
+            txt_id.Location = new Point(124, 58);
             txt_id.Name = "txt_id";
             txt_id.Size = new Size(100, 23);
             txt_id.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(430, 255);
+            ClientSize = new Size(358, 212);
             Controls.Add(txt_id);
             Controls.Add(label2);
             Controls.Add(btn_send);

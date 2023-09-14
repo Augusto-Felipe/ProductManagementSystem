@@ -56,34 +56,9 @@ namespace ProductManagementSystem
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            int productID = int.Parse(txt_name.Text);
-
-            try
-            {
-                string connectionString = "Server=localhost;User=root;Password=;Database=db_inventario";
-
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
-                {
-                    conn.Open();
-
-                    string sql = $"DELETE FROM PRODUTO WHERE id = {productID}";
-
-                    using (MySqlCommand command = new MySqlCommand(sql, conn))
-                    {
-                        command.ExecuteNonQuery();
-                    }
-
-                    RefreshDataGridView();
-
-                    MessageBox.Show("Produto Excluido!");
-
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            DeleteProduct deleteForm = new DeleteProduct();
+            deleteForm.DataDeleted += DataChanged;
+            deleteForm.ShowDialog();
         }
 
         private void RefreshDataGridView()
@@ -117,7 +92,7 @@ namespace ProductManagementSystem
             }
         }
 
-        private void EditForm_DataEdited(object sender, EventArgs e)
+        private void DataChanged(object sender, EventArgs e)
         {
             RefreshDataGridView();
         }
@@ -125,7 +100,7 @@ namespace ProductManagementSystem
         private void btn_edit_Click(object sender, EventArgs e)
         {
             EditProduct editForm = new EditProduct();
-            editForm.DataEdited += EditForm_DataEdited;
+            editForm.DataEdited += DataChanged;
             editForm.ShowDialog();
         }
     }

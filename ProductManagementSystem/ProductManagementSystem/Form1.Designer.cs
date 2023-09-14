@@ -59,7 +59,7 @@
             txt_name.Location = new Point(276, 63);
             txt_name.Multiline = true;
             txt_name.Name = "txt_name";
-            txt_name.Size = new Size(248, 26);
+            txt_name.Size = new Size(261, 26);
             txt_name.TabIndex = 1;
             // 
             // btn_add
@@ -163,14 +163,14 @@
             dataGridView1.Location = new Point(276, 102);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(248, 184);
+            dataGridView1.Size = new Size(261, 184);
             dataGridView1.TabIndex = 10;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(558, 317);
+            ClientSize = new Size(595, 317);
             Controls.Add(dataGridView1);
             Controls.Add(label5);
             Controls.Add(btn_list);
