@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
-            txt_name = new TextBox();
             btn_add = new Button();
             label2 = new Label();
             label3 = new Label();
@@ -53,14 +52,6 @@
             label1.Size = new Size(123, 37);
             label1.TabIndex = 0;
             label1.Text = "Produto";
-            // 
-            // txt_name
-            // 
-            txt_name.Location = new Point(276, 63);
-            txt_name.Multiline = true;
-            txt_name.Name = "txt_name";
-            txt_name.Size = new Size(261, 26);
-            txt_name.TabIndex = 1;
             // 
             // btn_add
             // 
@@ -161,17 +152,17 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(276, 102);
+            dataGridView1.Location = new Point(276, 63);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(261, 184);
+            dataGridView1.Size = new Size(261, 223);
             dataGridView1.TabIndex = 10;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(595, 317);
+            ClientSize = new Size(579, 317);
             Controls.Add(dataGridView1);
             Controls.Add(label5);
             Controls.Add(btn_list);
@@ -181,7 +172,6 @@
             Controls.Add(btn_edit);
             Controls.Add(label2);
             Controls.Add(btn_add);
-            Controls.Add(txt_name);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
@@ -193,7 +183,6 @@
         #endregion
 
         private Label label1;
-        private TextBox txt_name;
         private Button btn_add;
         private Label label2;
         private Label label3;
