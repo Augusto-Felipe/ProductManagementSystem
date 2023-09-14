@@ -5,8 +5,6 @@ namespace ProductManagementSystem
 {
     public partial class Form1 : Form
     {
-        MySqlConnection conn = null;
-
         public Form1()
         {
             InitializeComponent();
