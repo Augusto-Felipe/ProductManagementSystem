@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PvqTNJSaoIDfb1zIf8mal0p6qom/Y6IfodrmS36a4Yyc9wNc/ANXQuR7IWNcj2KJLViwlfTLBkVr0zGh8Mo9ig==",
+  "dgSpecHash": "UKBvwTr+tvX++0UrMkUbcOpUTVXlB1l89TmtSa1LKeHBC1S6JhE3cfLuqHw77ZUewo2M1IX1cDbpUQSgdmkOcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Felipe\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\mysql.data\\8.1.0\\mysql.data.8.1.0.nupkg.sha512",
+    "C:\\Users\\Felipe\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",

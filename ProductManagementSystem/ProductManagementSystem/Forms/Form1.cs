@@ -1,5 +1,7 @@
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using ProductManagementSystem.Forms;
+using ProductManagementSystem.Models;
 using System.Data;
 
 namespace ProductManagementSystem
@@ -33,7 +35,10 @@ namespace ProductManagementSystem
         {
             try
             {
-                string connectionString = "Server=localhost;User=root;Password=;Database=db_inventario";
+                var configPath = "config.json";
+                var configJson = File.ReadAllText(configPath);
+                var config = JsonConvert.DeserializeObject<SqlConnection>(configJson);
+                var connectionString = config.ConnectionString;
 
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
