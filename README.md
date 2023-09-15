@@ -19,9 +19,18 @@ Este é um aplicativo de gerenciamento de produtos desenvolvido em .NET Windows 
 - MySQL Server.
 
 # Como executar o projeto
-- Abra o projeto no Visual Studio.
-Configure a conexão com o banco de dados MySQL, insira as informações de conexão, como o servidor, porta, nome do banco de dados, usuário e senha.
+- Abra o projeto no Visual Studio e configure a conexão com o banco de dados MySQL.
+  
+<p align="center">
+  <img src="https://github.com/Augusto-Felipe/ProductManagementSystem/assets/107811979/bbcea9e3-d6a9-4318-9d33-8d76556949ef" alt="Captura de tela">
+</p>
 
+- Insira as informações de conexão através do arquivo 'config.json' , como o servidor, porta, nome do banco de dados, usuário e senha.
+  
+<p align="center">
+  <img src="https://github.com/Augusto-Felipe/ProductManagementSystem/assets/107811979/394ae32c-0ee1-41eb-a443-2312e23239b8" alt="Captura de tela">
+</p>
+  
 - Compile o projeto no Visual Studio.
 
 - Execute o aplicativo CRUD. Isso pode ser feito pressionando F5 no Visual Studio ou iniciando o aplicativo a partir do executável gerado após a compilação.
@@ -30,7 +39,11 @@ Configure a conexão com o banco de dados MySQL, insira as informações de cone
 
 ## Observações:
 
-Certifique-se de que as informações de conexão com o banco de dados no arquivo de configuração estejam corretas.
+Certifique-se de que as informações de conexão com o banco de dados no arquivo de configuração estejam corretas, lembrando que seu banco de dados deve conter um campo 'id' do tipo INT e um campo 'nome' do tipo String.
+
+<p align="center">
+  <img src="https://github.com/Augusto-Felipe/ProductManagementSystem/assets/107811979/5bbb21d8-c0e0-4d9c-8959-2e2e555a809d" alt="Captura de tela">
+</p>
 
 # Autor
 
