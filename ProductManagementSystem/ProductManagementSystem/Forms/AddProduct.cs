@@ -1,9 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
+﻿using MySql.Data.MySqlClient;
 using ProductManagementSystem.Models;
-using System.IO;
-using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace ProductManagementSystem.Forms
 {
@@ -14,23 +10,17 @@ namespace ProductManagementSystem.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             string product = txt_name.Text;
+            
             if (product.Length > 1)
             {
                 try
                 {
-                
-                    var configPath = "config.json";
-                    var configJson = File.ReadAllText(configPath);
-                    var config = JsonConvert.DeserializeObject<SqlConnection>(configJson);
-                    var connectionString = config.ConnectionString;
+                    var sqlConnection = SqlConnection.FromConfigFile();
 
-
-                    //string connectionString = "Server=localhost;User=root;Password=;Database=db_inventario";
-
-                    using (MySqlConnection conn = new MySqlConnection(connectionString))
+                    using (MySqlConnection conn = new MySqlConnection(sqlConnection.ConnectionString))
                     {
                         conn.Open();
 

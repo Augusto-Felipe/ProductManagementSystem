@@ -57,7 +57,7 @@
             btn_delete.TabIndex = 7;
             btn_delete.Text = "Deletar";
             btn_delete.UseVisualStyleBackColor = true;
-            btn_delete.Click += btn_delete_Click;
+            btn_delete.Click += Btn_delete_Click;
             // 
             // DeleteProduct
             // 

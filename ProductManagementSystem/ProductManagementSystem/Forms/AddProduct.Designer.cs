@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             txt_name = new TextBox();
-            button1 = new Button();
+            btn_add = new Button();
             SuspendLayout();
             // 
             // label1
@@ -49,22 +49,22 @@
             txt_name.Size = new Size(100, 23);
             txt_name.TabIndex = 1;
             // 
-            // button1
+            // btn_add
             // 
-            button1.Location = new Point(112, 111);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Adicionar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_add.Location = new Point(112, 111);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(75, 23);
+            btn_add.TabIndex = 2;
+            btn_add.Text = "Adicionar";
+            btn_add.UseVisualStyleBackColor = true;
+            btn_add.Click += Button1_Click;
             // 
             // AddProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(306, 196);
-            Controls.Add(button1);
+            Controls.Add(btn_add);
             Controls.Add(txt_name);
             Controls.Add(label1);
             Name = "AddProduct";
@@ -77,6 +77,6 @@
 
         private Label label1;
         private TextBox txt_name;
-        private Button button1;
+        private Button btn_add;
     }
 }

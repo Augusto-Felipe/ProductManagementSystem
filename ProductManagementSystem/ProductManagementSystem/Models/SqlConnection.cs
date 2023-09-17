@@ -1,9 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProductManagementSystem.Models
 {
@@ -11,5 +6,19 @@ namespace ProductManagementSystem.Models
     {
         public string ConnectionString { get; set; }
 
+        public static SqlConnection FromConfigFile()
+        {
+            try
+            {
+                var configPath = "config.json";
+                var configJson = File.ReadAllText(configPath);
+                var config = JsonConvert.DeserializeObject<SqlConnection>(configJson);
+                return config;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao ler configuração do arquivo JSON.", ex);
+            }
+        }
     }
 }

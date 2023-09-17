@@ -59,7 +59,7 @@
             btn_send.TabIndex = 2;
             btn_send.Text = "Alterar";
             btn_send.UseVisualStyleBackColor = true;
-            btn_send.Click += btn_send_Click;
+            btn_send.Click += Btn_send_Click;
             // 
             // label2
             // 

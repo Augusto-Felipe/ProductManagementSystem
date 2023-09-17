@@ -1,5 +1,4 @@
 using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 using ProductManagementSystem.Forms;
 using ProductManagementSystem.Models;
 using System.Data;
@@ -13,18 +12,18 @@ namespace ProductManagementSystem
             InitializeComponent();
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
+        private void Btn_add_Click(object sender, EventArgs e)
         {
             AddProduct addForm = new AddProduct();
             addForm.ShowDialog();
         }
 
-        private void btn_list_Click(object sender, EventArgs e)
+        private void Btn_list_Click(object sender, EventArgs e)
         {
             RefreshDataGridView();
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void Btn_delete_Click(object sender, EventArgs e)
         {
             DeleteProduct deleteForm = new DeleteProduct();
             deleteForm.DataDeleted += DataChanged;
@@ -35,12 +34,9 @@ namespace ProductManagementSystem
         {
             try
             {
-                var configPath = "config.json";
-                var configJson = File.ReadAllText(configPath);
-                var config = JsonConvert.DeserializeObject<SqlConnection>(configJson);
-                var connectionString = config.ConnectionString;
+                var sqlConnection = SqlConnection.FromConfigFile();
 
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                using (MySqlConnection conn = new MySqlConnection(sqlConnection.ConnectionString))
                 {
                     conn.Open();
 
@@ -70,7 +66,7 @@ namespace ProductManagementSystem
             RefreshDataGridView();
         }
 
-        private void btn_edit_Click(object sender, EventArgs e)
+        private void Btn_edit_Click(object sender, EventArgs e)
         {
             EditProduct editForm = new EditProduct();
             editForm.DataEdited += DataChanged;

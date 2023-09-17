@@ -63,7 +63,7 @@
             btn_add.Size = new Size(107, 122);
             btn_add.TabIndex = 2;
             btn_add.UseVisualStyleBackColor = true;
-            btn_add.Click += btn_add_Click;
+            btn_add.Click += Btn_add_Click;
             // 
             // label2
             // 
@@ -95,7 +95,7 @@
             btn_edit.Size = new Size(107, 122);
             btn_edit.TabIndex = 4;
             btn_edit.UseVisualStyleBackColor = true;
-            btn_edit.Click += btn_edit_Click;
+            btn_edit.Click += Btn_edit_Click;
             // 
             // label4
             // 
@@ -117,7 +117,7 @@
             btn_delete.Size = new Size(107, 122);
             btn_delete.TabIndex = 6;
             btn_delete.UseVisualStyleBackColor = true;
-            btn_delete.Click += btn_delete_Click;
+            btn_delete.Click += Btn_delete_Click;
             // 
             // label5
             // 
@@ -139,7 +139,7 @@
             btn_list.Size = new Size(107, 122);
             btn_list.TabIndex = 8;
             btn_list.UseVisualStyleBackColor = true;
-            btn_list.Click += btn_list_Click;
+            btn_list.Click += Btn_list_Click;
             // 
             // mySqlCommand1
             // 

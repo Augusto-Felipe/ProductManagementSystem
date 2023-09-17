@@ -1,5 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using Newtonsoft.Json;
 using ProductManagementSystem.Models;
 
 namespace ProductManagementSystem
@@ -12,40 +11,44 @@ namespace ProductManagementSystem
             InitializeComponent();
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void Btn_delete_Click(object sender, EventArgs e)
         {
-            int productID = int.Parse(txt_id.Text);
+            string productID = txt_id.Text;
 
-            try
+            if (string.IsNullOrEmpty(productID))
             {
-                var configPath = "config.json";
-                var configJson = File.ReadAllText(configPath);
-                var config = JsonConvert.DeserializeObject<SqlConnection>(configJson);
-                var connectionString = config.ConnectionString;
-
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
-                {
-                    conn.Open();
-
-                    string sql = $"DELETE FROM PRODUTO WHERE id = {productID}";
-
-                    using (MySqlCommand command = new MySqlCommand(sql, conn))
-                    {
-                        command.ExecuteNonQuery();
-                    }
-
-                    DataDeleted.Invoke(this, EventArgs.Empty);
-
-                    MessageBox.Show("Produto Excluido!");
-
-                    this.Close();
-
-                    conn.Close();
-                }
+                MessageBox.Show("Digite um ID válido!");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    var sqlConnection = SqlConnection.FromConfigFile();
+
+                    using (MySqlConnection conn = new MySqlConnection(sqlConnection.ConnectionString))
+                    {
+                        conn.Open();
+
+                        string sql = $"DELETE FROM PRODUTO WHERE id = {productID}";
+
+                        using (MySqlCommand command = new MySqlCommand(sql, conn))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+
+                        DataDeleted.Invoke(this, EventArgs.Empty);
+
+                        MessageBox.Show("Produto Excluido!");
+
+                        this.Close();
+
+                        conn.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
