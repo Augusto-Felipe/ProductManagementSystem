@@ -19,7 +19,8 @@ Este é um aplicativo de gerenciamento de produtos desenvolvido em .NET Windows 
 - MySQL Server.
 
 # Como executar o projeto
-- Abra o projeto no Visual Studio e configure a conexão com o banco de dados MySQL.
+- Faça o download do projeto, extraia o mesmo e abra utilizando o Visual Studio.
+- Crie um novo banco de dados no MySQL que contenha uma tabela de nome 'produto' que contenha os campos 'id' e 'nome'
   
 <p align="center">
   <img src="https://github.com/Augusto-Felipe/ProductManagementSystem/assets/107811979/bbcea9e3-d6a9-4318-9d33-8d76556949ef" alt="Captura de tela">
